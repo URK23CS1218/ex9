@@ -498,7 +498,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🎬 Movie Ticket API Server started!`);
   console.log(`📍 Port: ${PORT}`);
-  console.log(`🔗 URL: https://ex9-backend.onrender.com/`);
+  console.log(`🔗 URL: https://ex9-backend.onrender.com`);
   console.log(`🌐 Network: http://0.0.0.0:${PORT}`);
   console.log(`⏰ Started at: ${new Date().toLocaleString()}`);
   console.log('\n📋 Available endpoints:');
