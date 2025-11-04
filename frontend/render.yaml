@@ -9,4 +9,5 @@ static_sites:
         value: https://backend.onrender.com
       - key: REACT_APP_NODE_ENV
 
-        value: production
+        value: development
+
