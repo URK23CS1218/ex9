@@ -1,7 +1,7 @@
 {
   "name": "movie-ticket-frontend",
   "version": "1.0.0",
-  "description": "Frontend for movie ticket app",
+  "description": "Movie Ticket Booking App Frontend",
   "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
@@ -12,7 +12,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -28,5 +27,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 }
