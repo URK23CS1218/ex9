@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware - Fix CORS issues
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001','https://ex9-backend.onrender.com'],
+  origin: ['http://localhost:3000', 'http://localhost:3001','https://ex9-9q7t.onrender.com'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -507,13 +507,13 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`   GET https://ex9-9q7t.onrender.com/api/movies`);
   console.log(`   GET  https://ex9-9q7t.onrender.com/api/debug/users`);
   console.log(`   GET  https://ex9-9q7t.onrender.com/debug/bookings`);
-  console.log(`   POST https://ex9-backend.onrender.com/auth/register`);
-  console.log(`   POST https://ex9-backend.onrender.com/auth/login`);
-  console.log(`   POST https://ex9-backend.onrender.com/bookings`);
-  console.log(`   GET  https://ex9-backend.onrender.com/bookings/user/:userId`);
-  console.log(`   GET  https://ex9-backend.onrender.com/bookings/search/:refNumber`);
-  console.log(`   PUT  https://ex9-backend.onrender.com/bookings/cancel/:refNumber`);
-  console.log(`   GET  https://ex9-backend.onrender.com/api/auth/profile`);
+  console.log(`   POST https://ex9-9q7t.onrender.com/auth/register`);
+  console.log(`   POST https://ex9-9q7t.onrender.com/auth/login`);
+  console.log(`   POST https://ex9-9q7t.onrender.com/bookings`);
+  console.log(`   GET  https://ex9-9q7t.onrender.com/bookings/user/:userId`);
+  console.log(`   GET https://ex9-9q7t.onrender.com/bookings/search/:refNumber`);
+  console.log(`   PUT  https://ex9-9q7t.onrender.com/bookings/cancel/:refNumber`);
+  console.log(`   GET  https://ex9-9q7t.onrender.com/api/auth/profile`);
   console.log('\n👤 Test user credentials:');
   console.log(`   Email: test@example.com`);
   console.log(`   Password: password123`);
