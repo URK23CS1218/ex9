@@ -6,6 +6,7 @@ static_sites:
     publishPath: build
     envVars:
       - key: REACT_APP_API_BASE_URL
-        value: https://movie-ticket-backend.onrender.com
+        value: https://backend.onrender.com
       - key: REACT_APP_NODE_ENV
+
         value: production
