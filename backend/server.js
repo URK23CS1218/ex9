@@ -498,13 +498,13 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🎬 Movie Ticket API Server started!`);
   console.log(`📍 Port: ${PORT}`);
-  console.log(`🔗 URL: http://localhost:${PORT}`);
+  console.log(`🔗 URL: https://ex9-backend.onrender.com/`);
   console.log(`🌐 Network: http://0.0.0.0:${PORT}`);
   console.log(`⏰ Started at: ${new Date().toLocaleString()}`);
   console.log('\n📋 Available endpoints:');
-  console.log(`   GET  http://localhost:${PORT}/health`);
-  console.log(`   GET  http://localhost:${PORT}/api/test`);
-  console.log(`   GET  http://localhost:${PORT}/api/movies`);
+  console.log(`   GET  https://ex9-backend.onrender.com//health`);
+  console.log(`   GET  https://ex9-backend.onrender.com/api/test`);
+  console.log(`   GET  https://ex9-backend.onrender.com//api/movies`);
   console.log(`   GET  http://localhost:${PORT}/api/debug/users`);
   console.log(`   GET  http://localhost:${PORT}/api/debug/bookings`);
   console.log(`   POST http://localhost:${PORT}/api/auth/register`);
@@ -513,7 +513,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`   GET  http://localhost:${PORT}/api/bookings/user/:userId`);
   console.log(`   GET  http://localhost:${PORT}/api/bookings/search/:refNumber`);
   console.log(`   PUT  http://localhost:${PORT}/api/bookings/cancel/:refNumber`);
-  console.log(`   GET  http://localhost:${PORT}/api/auth/profile`);
+  console.log(`   GET  https://ex9-backend.onrender.com/api/auth/profile`);
   console.log('\n👤 Test user credentials:');
   console.log(`   Email: test@example.com`);
   console.log(`   Password: password123`);
