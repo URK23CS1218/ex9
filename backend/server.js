@@ -3,20 +3,17 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const express = require('express');
-const cors = require('cors');
 const app = express();
 
-// ✅ Allow your frontend domain
+// ✅ CORS configuration for local development
 app.use(cors({
-  origin: 'https://ex9-9q7t.onrender.com', // your frontend domain
+  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://ex9-9q7t.onrender.com'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
 
 // Body parser
 app.use(express.json());
-
 
 // Handle preflight requests
 app.options('*', cors());
@@ -289,7 +286,7 @@ app.get('/api/movies', (req, res) => {
   });
 });
 
-// BOOKING ROUTES - FIXED
+// BOOKING ROUTES
 
 // Create a new booking
 app.post('/api/bookings', async (req, res) => {
@@ -339,7 +336,7 @@ app.post('/api/bookings', async (req, res) => {
   }
 });
 
-// Get user bookings - FIXED ROUTE
+// Get user bookings
 app.get('/api/bookings/user/:userId', (req, res) => {
   try {
     const { userId } = req.params;
@@ -365,7 +362,7 @@ app.get('/api/bookings/user/:userId', (req, res) => {
   }
 });
 
-// Search booking by reference number - FIXED ROUTE
+// Search booking by reference number
 app.get('/api/bookings/search/:referenceNumber', (req, res) => {
   try {
     const { referenceNumber } = req.params;
@@ -397,7 +394,7 @@ app.get('/api/bookings/search/:referenceNumber', (req, res) => {
   }
 });
 
-// Cancel booking - FIXED ROUTE
+// Cancel booking
 app.put('/api/bookings/cancel/:referenceNumber', (req, res) => {
   try {
     const { referenceNumber } = req.params;
@@ -501,7 +498,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🎬 Movie Ticket API Server started!`);
   console.log(`📍 Port: ${PORT}`);
-  console.log(`🔗 URL: http://localhost:${PORT}`);
+  console.log(`🔗 Local URL: http://localhost:${PORT}`);
   console.log(`🌐 Network: http://0.0.0.0:${PORT}`);
   console.log(`⏰ Started at: ${new Date().toLocaleString()}`);
   console.log('\n📋 Available endpoints:');
