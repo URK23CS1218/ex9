@@ -3,17 +3,20 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const express = require('express');
+const cors = require('cors');
 const app = express();
 
-// Middleware - Fix CORS issues
+// ✅ Allow your frontend domain
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001'],
+  origin: 'https://ex9-9q7t.onrender.com', // your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+// Body parser
 app.use(express.json());
+
 
 // Handle preflight requests
 app.options('*', cors());
